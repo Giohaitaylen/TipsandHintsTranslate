@@ -110,12 +110,12 @@ Bộ nhớ cho mảng vùng 1 được tạo ở đâu? Có giống khu vực 2 
 -   Kể từ khi xuất hiện "mạng lưới len hoang dã", chúng ta có được sự trợ giúp của các diễn đàn và công cụ tìm kiếm, cho phép chúng ta "ngẩn ngơ" để được trợ giúp. Tìm kiếm trên web thường là bước đầu tiên hiệu quả để có câu trả lời hoặc manh mối ngay lập tức. Nhưng đừng tin những gì bạn đọc được – không phải mọi lời khuyên đều tốt. Tùy thuộc vào bản chất của vấn đề, bạn sẽ thường phát hiện ra rằng những người khác cũng gặp phải vấn đề tương tự. Trong trường hợp đó, bạn có thể nhận được một hoặc nhiều câu trả lời được đăng để xử lý . 
 -   Khi tiếp cận diễn đàn, hãy đặt những câu hỏi thông minh. Các bài đăng trên diễn đàn như "I2C của tôi không hoạt động, bạn có thể giúp được không?" thể hiện rất ít sự chủ động. Đây là một kiểu nỗ lực khác "ném vấn đề qua tường và hy vọng vào kết quả tốt nhất". Bạn có mang xe đến gara và nói với họ rằng xe của bạn bị hỏng không? Các bài đăng trên diễn đàn không cần phải chơi trò chơi hai mươi câu hỏi. 
 Đăng truy vấn của bạn với một số thông tin cụ thể:
-    • Bản chất chính xác của vấn đề (phần nào của I2C không "hoạt động") • Bạn đang làm việc với thiết bị I2C nào? 
-    • Bạn đã thử những gì cho đến nay?
-    • Có lẽ chi tiết cụ thể về bảng phát triển ESP32 của bạn. 
-    • Nền tảng phát triển – Arduino hay ESP-IDF? 
-    • Bạn đang sử dụng thư viện nào, nếu có? 
-    • Bất kỳ điều kỳ lạ nào khác có thể quan sát được.
+    - Bản chất chính xác của vấn đề (phần nào của I2C không "hoạt động") • Bạn đang làm việc với thiết bị I2C nào? 
+    - Bạn đã thử những gì cho đến nay?
+    - Có lẽ chi tiết cụ thể về bảng phát triển ESP32 của bạn. 
+    - Nền tảng phát triển – Arduino hay ESP-IDF? 
+    - Bạn đang sử dụng thư viện nào, nếu có? 
+    - Bất kỳ điều kỳ lạ nào khác có thể quan sát được.
 -   Tôi sẽ tránh đăng mã trên bài đăng đầu tiên nhưng hãy sử dụng khả năng phán đoán tốt nhất của bạn. Một số người đăng rất nhiều mã như thể điều này khiến nó dễ hiểu. Tôi tin rằng sẽ hiệu quả hơn nếu giải thích bản chất của vấn đề trước. Bạn luôn có thể đăng mã dưới dạng theo dõi. 
 -   Khi đăng mã, không phải lúc nào cũng cần đăng hết (đặc biệt khi dài). Đôi khi chỉ cần đăng những gì có thể góp phần gây ra vấn đề. Trong ví dụ của chúng tôi, bạn chỉ có thể đăng các hàm mã I2C được sử dụng. 
 -   Diễn đàn thường có cách đăng "code" vào tin nhắn (như [code] . . . [/code]). Hãy chắc chắn để tận dụng điều đó bất cứ khi nào có thể. Mặt khác, giữa phông chữ cân xứng và việc thiếu tôn trọng thụt lề, mã sẽ trở thành một mớ hỗn độn khủng khiếp khi đọc. Tôi ghét đọc mã thụt lề khủng khiếp. 
@@ -126,8 +126,8 @@ Bộ nhớ cho mảng vùng 1 được tạo ở đâu? Có giống khu vực 2 
 -   Có thể sử dụng các phương pháp khác nhau để chỉ báo - in ra Màn hình nối tiếp hoặc kích hoạt đèn LED. Đèn LED rất hữu ích cho việc theo dõi ISR ​​ở những nơi bạn không thể in tin nhắn. Nếu bạn có đủ GPIO, bạn thậm chí có thể sử dụng đèn LED hai màu để báo hiệu những thứ khác nhau. Ý tưởng là để chỉ ra rằng mã đã được thực thi tại các điểm quan tâm. Nếu bạn cần nhiều hơn từ đèn LED, bạn có thể nhấp nháy mã khi không ở ISR. Khi bạn đã thu hẹp vùng mã nơi xảy ra sự cố, bạn có thể xem xét kỹ mã nguyên nhân một cách cẩn thận hơn.
 ##  Lập trình cho câu trả lời 
 -   Tôi đã từng thấy các lập trình viên ở nơi làm việc tranh cãi suốt nửa giờ đồng hồ về việc điều gì sẽ xảy ra khi điều này điều nọ xảy ra. Thậm chí sau đó, cuộc tranh cãi thường vẫn không được giải quyết. Toàn bộ vấn đề thường có thể được giải quyết bằng cách viết một chương trình đơn giản kéo dài một phút để kiểm tra giả thuyết. Tất nhiên, hãy sử dụng một số cảm nhận thông thường với những gì bạn đã quan sát được:
-    • Hành vi được quan sát có được API hỗ trợ không? 
-    • Hay hành vi này là do lạm dụng API hoặc khai thác lỗi? 
+    - Hành vi được quan sát có được API hỗ trợ không? 
+    - Hay hành vi này là do lạm dụng API hoặc khai thác lỗi? 
 -   Nếu API có nguồn mở thì mã nguồn thường là câu trả lời cuối cùng. Thông thường, mã và nhận xét sẽ chỉ ra mục đích của các giao diện được ghi chép kém. Kết luận: đừng ngại viết mã vứt đi.
 ##  Tận dụng lệnh find 
 -   Khi kiểm tra mã nguồn mở, bạn có thể tìm kiếm mã đó trực tuyến hoặc kiểm tra những gì bạn gặp phải trong hệ thống của mình. Việc xem xét mã đã cài đặt là điều quan trọng khi bạn cho rằng mình đã tìm thấy lỗi trong thư viện mà bạn đang sử dụng. Một trong những nhược điểm của Arduino là rất nhiều thứ được thực hiện ở hậu trường và vẫn bị ẩn đối với học sinh. Nếu bạn đang sử dụng hệ thống POSIX (Linux, FreeBSD hoặc MacOS, v.v.) thì lệnh find cực kỳ hữu ích. Người dùng Windows có thể cài đặt WSL (Hệ thống con Windows cho Linux) để thực hiện điều tương tự hoặc sử dụng phiên bản lệnh Windows. 
